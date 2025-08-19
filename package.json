@@ -1,90 +1,70 @@
 {
-  "name": "deni-react-treeview",
+  "name": "muaaz-react-treeview",
   "license": "MIT",
-  "version": "1.1.11",
+  "version": "2.0.0",
   "private": false,
-  "author": "Denimar de Moraes <denimar@gmail.com>",
+  "author": "Muaaz Khalid <muaaz.khalid.m@gmail.com>",
+  "contributors": [
+    {
+      "name": "Denimar de Moraes",
+      "email": "denimar@gmail.com"
+    }
+  ],
   "description": "A modern, themable and configurable treeview for React.",
-  "homepage": "https://github.com/denimar/deni-react-treeview",
+  "homepage": "https://github.com/fastesol/muaaz-react-treeview",
   "bugs": {
-    "url": "https://github.com/denimar/deni-react-treeview/issues"
+    "url": "https://github.com/fastesol/muaaz-react-treeview/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:denimar/deni-react-treeview.git"
+    "url": "git@github.com:fastesol/muaaz-react-treeview.git"
   },
   "scripts": {
-    "build": "yarn clean; rollup -c; yarn postBuild",
-    "postBuild": "node ./scripts/postBuild",
-    "clean": "rimraf dist",
-    "dev": "yarn storybook",
-    "format": "prettier --write \"src/**/*.{ts,tsx,json,js,jsx}\"",
-    "format:check": "prettier --list-different \"src/**/*.{ts,tsx,json,js,jsx}\"",
-    "lint": "yarn lint:script && yarn lint:style",
-    "lint:script": "eslint --ext js --ext jsx --ext ts --ext tsx src",
-    "lint:style": "stylelint src",
-    "npm:publish": "./scripts/publishNPM.sh",
-    "storybook": "start-storybook -p 9001 -s ./src/assets -c .storybook",
-    "storybook:build": "build-storybook -c .storybook -o .storybook/dist -s src/assets",
-    "test": "jest --maxWorkers=2",
-    "test:watch": "yarn test --watch",
-    "test:coverage": "jest --coverage --colors --maxWorkers=2"
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext ts,tsx --fix"
   },
-  "main": "libs/lib.cjs.js",
-  "module": "libs/lib.esm.js",
-  "browser": "libs/lib.umd.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
-    "@storybook/addon-notes": "^5.3.19",
-    "axios": "^0.19.2",
+    "axios": "^1.6.0",
     "classnames": "^2.2.6",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.10.0"
+    "react-icons": "^4.12.0"
   },
   "peerDependencies": {
     "classnames": "^2.2.6",
-    "react": "^16.13.1"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@rollup/plugin-commonjs": "^11.1.0",
-    "@storybook/addon-storysource": "^5.3.19",
-    "@storybook/preset-typescript": "^3.0.0",
-    "@storybook/react": "^5.3.18",
-    "@testing-library/react": "^10.0.2",
-    "@types/classnames": "^2.2.10",
-    "@types/jest": "^25.2.1",
-    "@types/node": "^10.12.18",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
-    "@typescript-eslint/eslint-plugin": "^2.27.0",
-    "@typescript-eslint/parser": "^2.27.0",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.5.2",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^3.0.0",
-    "jest": "^25.3.0",
-    "node-sass": "^4.13.1",
-    "prettier": "^2.0.4",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.6.0",
-    "rollup-plugin-external-globals": "^0.5.0",
-    "rollup-plugin-postcss": "^2.5.0",
-    "rollup-plugin-terser": "^5.3.0",
-    "rollup-plugin-typescript2": "^0.27.0",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.3",
-    "stylelint": "^13.3.2",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-scss": "^3.16.1",
-    "ts-jest": "^25.3.1",
-    "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.1"
+    "@types/classnames": "^2.3.1",
+    "@types/node": "^24.3.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "sass-embedded": "^1.90.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.0.0"
   },
   "keywords": [
     "react",
@@ -94,6 +74,7 @@
     "view",
     "treenode",
     "tree-node",
-    "deni-react-treeview"
+    "muaaz-react-treeview",
+    "muaaz-react-treeview"
   ]
 }

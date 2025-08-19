@@ -1,2 +1,2 @@
-import DeniReactTreeView from './components/deni-react-treeview/DeniReactTreeView';
-export default DeniReactTreeView
+import MuaazReactTreeView from './components/muaaz-react-treeview/MuaazReactTreeView';
+export default MuaazReactTreeView

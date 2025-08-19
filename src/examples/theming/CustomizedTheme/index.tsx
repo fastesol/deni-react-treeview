@@ -1,16 +1,16 @@
 import React from 'react'
-import DeniReactTreeView from "../../../components"
+import MuaazReactTreeView from "../../../components"
 import './theming-customizations.scss'
 
 const CustomeziedTheme = () => {
   return (
     <div className="theme-customization">
-      <DeniReactTreeView 
+      <MuaazReactTreeView 
         className="treeview-teste" 
         url="https://raw.githubusercontent.com/denimar/fakedata/master/data/trees/dogs.json">
-      </DeniReactTreeView>   
+      </MuaazReactTreeView>   
       <br />
-      <a href="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/examples/theming/theming-customizations.scss">theming-customizations.scss</a>
+      <a href="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/examples/theming/theming-customizations.scss">theming-customizations.scss</a>
     </div>  
   )
 }  

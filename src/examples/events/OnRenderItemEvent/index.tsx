@@ -1,42 +1,39 @@
-import React, { useRef } from 'react'
-import { FaTrash, FaEdit } from 'react-icons/fa';
-import DeniReactTreeView from '../../../components'
-import './OnRenderItemEvent.scss'
+import React from 'react';
+import MuaazReactTreeView from '../../../components/muaaz-react-treeview/MuaazReactTreeView';
+import { TreeItem } from '../../../components/muaaz-react-treeview-item/MuaazReactTreeViewItemProps';
 
-const OnRenderItemEvent: React.FC = () => {
-  const treeviewRef = useRef<DeniReactTreeView>(null)
-
-  const deleteItemClick = id => {
-    if (treeviewRef.current) treeviewRef.current.api.removeItem(id);
+const OnRenderItemEvent = () => {
+  const deleteItemClick = (id: any) => {
+    alert(`Delete item with id: ${id}`);
   }
 
-  const editItemClick = item => {
-    alert('Edit item: ' + JSON.stringify(item, null, 2))
+  const editItemClick = (item: TreeItem) => {
+    alert(`Edit item: ${item.text}`);
   }
 
-  const onRenderItem = (item, treeview) => {
+  const onRenderItem = (item: TreeItem, treeview: MuaazReactTreeView) => {
     return (
-      <div className="treeview-item-example">
-        <span className="treeview-item-example-text">{item.text}</span>
-        <span className="actionButton trash" onClick={() => deleteItemClick(item.id)}><FaTrash size="15" /></span>
-        <span className="actionButton edit" onClick={() => editItemClick(item)}><FaEdit size="15" /></span>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <span>{item.text}</span>
+        <button onClick={() => editItemClick(item)} style={{ fontSize: '12px', padding: '2px 6px' }}>
+          Edit
+        </button>
+        <button onClick={() => deleteItemClick(item.id)} style={{ fontSize: '12px', padding: '2px 6px', backgroundColor: '#ff6b6b', color: 'white', border: 'none' }}>
+          Delete
+        </button>
       </div>
-    )
+    );
   }
 
   return (
-    <>
-      <DeniReactTreeView
-        className="onrenderitem-example"
-        ref={ treeviewRef }
-        url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json" 
-        selectRow={ true }
-        onRenderItem={ onRenderItem }
+    <div>
+      <h3>onRenderItem Event Example</h3>
+      <MuaazReactTreeView 
+        url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/public/api/countries.json"
+        onRenderItem={onRenderItem}
       />
-      <br />
-      <a href="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/examples/events/OnRenderItemsEvents.scss">OnRenderItemEvent.scss</a>
-    </>
-  )
+    </div>
+  );
 }
 
-export default OnRenderItemEvent
+export default OnRenderItemEvent;

@@ -1,8 +1,8 @@
 import React from 'react'
-import DeniReactTreeView from "../../../components"
+import MuaazReactTreeView from "../../../components"
 
 const ToARemoteJsonInLazyLoad = () => {
-  return <DeniReactTreeView url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json" lazyLoad={ true } />
+  return <MuaazReactTreeView url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries.json" lazyLoad={ true } />
 }
 
 export default  ToARemoteJsonInLazyLoad

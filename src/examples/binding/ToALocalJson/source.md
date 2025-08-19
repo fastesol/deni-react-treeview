@@ -1,9 +1,9 @@
 ```javascript
 import React from 'react'
-import DeniReactTreeView from 'deni-react-treeview'
+import MuaazReactTreeView from 'muaaz-react-treeview'
 
 const toALocalJson = () => {
-  return <DeniReactTreeView json="./data/countries-by-continents.json" /> 
+  return <MuaazReactTreeView json="./data/countries-by-continents.json" /> 
 }
 
 export default toALocalJson

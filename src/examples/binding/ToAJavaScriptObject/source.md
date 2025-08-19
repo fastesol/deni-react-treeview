@@ -1,9 +1,9 @@
 ```javascript
 import React from 'react'
-import DeniReactTreeView from 'deni-react-treeview'
+import MuaazReactTreeView from 'muaaz-react-treeview'
 
 const ToAJavaScriptObject = () => {
-  return <DeniReactTreeView items={ fruitsAndVegetables } />
+  return <MuaazReactTreeView items={ fruitsAndVegetables } />
 }
 
 const fruitsAndVegetables = [

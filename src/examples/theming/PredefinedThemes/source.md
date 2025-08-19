@@ -1,6 +1,6 @@
 ```javascript
 import React from 'react'
-import DeniReactTreeView from "deni-react-treeview"
+import MuaazReactTreeView from "muaaz-react-treeview"
 
 const themes = [ 'classic', 'metro', 'moonlight', 'purple', 'green', 'orange', 'red', 'silver' ]
 
@@ -10,12 +10,12 @@ const PredefinedThemes = () => {
       { 
         themes.map((theme, index) => {
           return (
-            <DeniReactTreeView 
+            <MuaazReactTreeView 
               style={{ marginRight: '10px', marginBottom: '10px' }}
               key={index} 
               showCheckbox={true} 
               theme={theme} 
-              url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries-by-continents.json"
+              url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries-by-continents.json"
             />
           )  
         })

@@ -1,11 +1,11 @@
 ```javascript
 import React, { useRef } from 'react'
 import { FaTrash, FaEdit } from 'react-icons/fa';
-import DeniReactTreeView from 'deni-react-treeview'
+import MuaazReactTreeView from 'muaaz-react-treeview'
 import './OnRenderItemEvent.scss'
 
 const OnRenderItemEvent: React.FC = () => {
-  const treeviewRef = useRef<DeniReactTreeView>(null)
+  const treeviewRef = useRef<MuaazReactTreeView>(null)
 
   const deleteItemClick = id => {
     if (treeviewRef.current) treeviewRef.current.api.removeItem(id);
@@ -26,10 +26,10 @@ const OnRenderItemEvent: React.FC = () => {
   }
 
   return (
-    <DeniReactTreeView
+    <MuaazReactTreeView
       className="onrenderitem-example"
       ref={ treeviewRef }
-      url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json" 
+      url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries.json" 
       selectRow={ true }
       onRenderItem={ onRenderItem }
     />

@@ -1,35 +1,27 @@
-import React from 'react'
-import DeniReactTreeView from '../../../components'
-import { FaTrash, FaEdit } from 'react-icons/fa';
+import React from 'react';
+import MuaazReactTreeView from '../../../components/muaaz-react-treeview/MuaazReactTreeView';
+import { TreeItem } from '../../../components/muaaz-react-treeview-item/MuaazReactTreeViewItemProps';
 
-const ActionButtonsOption: React.FC = () => {
-  const onActionButtonClick = (item, actionButton) => {
-    const buttonName = actionButton.type.name;
-
-    switch (buttonName) {
-      case 'FaTrash':
-        alert('Action: trash, Item: ' + item.text);
-        break;
-      case 'FaEdit':
-        alert('Action: edit, Item: ' + item.text);
-        break;
-      default:
-    }
+const ActionButtonsOption = () => {
+  const onActionButtonClick = (item: TreeItem, actionButton: React.ReactElement) => {
+    alert(`Action button clicked for item: ${item.text}, action: ${actionButton.props.children}`);
   }
 
   const actionButtons = [
-    (<FaTrash key={1} size="15" color="#ff9980" />),
-    (<FaEdit key={2} size="15" color="#3679b0" />)    
+    <span key="edit" style={{ color: 'blue', cursor: 'pointer' }}>✏️</span>,
+    <span key="delete" style={{ color: 'red', cursor: 'pointer' }}>🗑️</span>
   ];
 
   return (
-    <DeniReactTreeView
-      url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json"
-      selectRow={ true }
-      actionButtons={ actionButtons }
-      onActionButtonClick={ onActionButtonClick }
-    />
-  )
+    <div>
+      <h3>Action Buttons Option Example</h3>
+      <MuaazReactTreeView 
+        url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/public/api/countries.json"
+        actionButtons={actionButtons}
+        onActionButtonClick={onActionButtonClick}
+      />
+    </div>
+  );
 }
 
-export default ActionButtonsOption
+export default ActionButtonsOption;

@@ -1,11 +1,11 @@
 ```javascript
 import React from 'react'
-import DeniReactTreeView from 'deni-react-treeview'
+import MuaazReactTreeView from 'muaaz-react-treeview'
 
 const ShowCheckboxOption: React.FC = () => {
   return (
-    <DeniReactTreeView 
-      url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json" 
+    <MuaazReactTreeView 
+      url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries.json" 
       showCheckbox={ true } 
     />
   )  

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $blue: #9DC2E1;
 $red: #ff8080;
 $green: #9ce2da; //#80ff80;
@@ -19,7 +21,7 @@ $base-color: $blue;
 }
 
 @mixin gradient-background ($end-color) {
-  $selection-background-start-color: lighten($end-color, 20%);
+  $selection-background-start-color: color.adjust($end-color, $lightness: 20%);
   background: $selection-background-start-color; /* Old browsers */
   background: -moz-linear-gradient(top, $selection-background-start-color 0%, $end-color 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, $selection-background-start-color 0%,$end-color 100%); /* Chrome10-25,Safari5.1-6 */

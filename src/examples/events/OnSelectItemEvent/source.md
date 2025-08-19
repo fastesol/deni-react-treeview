@@ -1,12 +1,12 @@
 ```javascript
 import React from 'react'
-import DeniReactTreeView from 'deni-react-treeview'
+import MuaazReactTreeView from 'muaaz-react-treeview'
 
 const OnSelectItemEvent: React.FC = () => {
   const onSelectItemHandler = item => alert(`onSelectItem - item : ${item.text}`)
 
   return (
-    <DeniReactTreeView 
+    <MuaazReactTreeView 
       json="./data/countries-by-continents.json" 
       onSelectItem={ onSelectItemHandler }
     />

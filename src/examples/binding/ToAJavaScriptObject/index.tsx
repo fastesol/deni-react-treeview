@@ -1,8 +1,8 @@
 import React from 'react'
-import DeniReactTreeView from "../../../components"
+import MuaazReactTreeView from "../../../components"
 
 const ToAJavaScriptObject = () => {
-  return <DeniReactTreeView items={ fruitsAndVegetables } />
+  return <MuaazReactTreeView items={ fruitsAndVegetables } />
 }
 
 export default  ToAJavaScriptObject

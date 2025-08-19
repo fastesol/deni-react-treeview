@@ -1,15 +1,19 @@
-import React from 'react'
-import DeniReactTreeView from '../../../components'
+import React from 'react';
+import MuaazReactTreeView from '../../../components/muaaz-react-treeview/MuaazReactTreeView';
+import { TreeItem } from '../../../components/muaaz-react-treeview-item/MuaazReactTreeViewItemProps';
 
-const OnSelectItemEvent: React.FC = () => {
-  const onSelectItemHandler = item => alert(`onSelectItem - item : ${item.text}`)
+const OnSelectItemEvent = () => {
+  const onSelectItemHandler = (item: TreeItem) => alert(`onSelectItem - item : ${item.text}`)
 
   return (
-    <DeniReactTreeView 
-      json="./data/countries-by-continents.json" 
-      onSelectItem={ onSelectItemHandler }
-    />
-  )
+    <div>
+      <h3>onSelectItem Event Example</h3>
+      <MuaazReactTreeView 
+        url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/public/api/countries.json"
+        onSelectItem={onSelectItemHandler}
+      />
+    </div>
+  );
 }
 
-export default OnSelectItemEvent
+export default OnSelectItemEvent;

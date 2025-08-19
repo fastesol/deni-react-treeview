@@ -1,15 +1,16 @@
-@import '../style-base.scss';
-@import './icons-theme.scss';
+@use '../style-base.scss' as base;
+@use './icons-theme.scss' as icons;
+@use "sass:color";
 
-@mixin set-theme($theme-base-color: $base-color) {
+@mixin set-theme($theme-base-color: base.$base-color) {
     $base-color: $theme-base-color;
-    color: darken($base-color, 45%) !important;
+    color: color.adjust($base-color, $lightness: -45%) !important;
 
-    border-color: darken($base-color, 10%) !important;
+    border-color: color.adjust($base-color, $lightness: -10%) !important;
 
     &:hover {
       &.select-row {
-        background-color: lighten($base-color, 20%);
+        background-color: color.adjust($base-color, $lightness: 20%);
       }
       &:not(.select-row) {
         background-color: transparent;
@@ -17,17 +18,17 @@
     }
 
     &.selected {
-      @include gradient-background($base-color);
-      outline-color: lighten($base-color, 10%) !important;
+      @include base.gradient-background($base-color);
+      outline-color: color.adjust($base-color, $lightness: 10%) !important;
     }
     .checkbox {
-      border-color: lighten($base-color, 4%) !important;
+      border-color: color.adjust($base-color, $lightness: 4%) !important;
       &.selected {
-        border-color: darken($base-color, 8%) !important;
+        border-color: color.adjust($base-color, $lightness: -8%) !important;
       }
     }
     .expand-button {
-      color: darken($base-color, 45%) !important;
+      color: color.adjust($base-color, $lightness: -45%) !important;
     }
 
     .icon-and-text {
@@ -36,7 +37,7 @@
           background-color: transparent;
         }
         &:not(.select-row) {
-          background-color: lighten($base-color, 20%);
+          background-color: color.adjust($base-color, $lightness: 20%);
         }
       }
       &.select-row {
@@ -44,7 +45,7 @@
         padding: 1px;
       }
       &.selected {
-        @include gradient-background($base-color);
+        @include base.gradient-background($base-color);
       }
 
     }

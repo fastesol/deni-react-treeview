@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react';
-import DeniReactTreeView from '../../components';
+import MuaazReactTreeView from '../../components';
 import AutoLoadFalseOption from './AutoLoadFalseOption'
 import ActionButtonsOption from './ActionButtonsOption'
 import LazyLoadTrueOption from './LazyLoadTrueOption'
@@ -11,7 +11,7 @@ import ShowIconOption from './ShowIconOption'
 import ShowRootOption from './ShowRootOption'
 import ThemeOption from './ThemeOption'
 
-const countriesURL = 'https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json'
+const countriesURL = 'https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries.json'
 
 storiesOf('3 - Options', module)  
   .add('autoLoad = false', () => <AutoLoadFalseOption />, { notes: require('./AutoLoadFalseOption/source.md').default })

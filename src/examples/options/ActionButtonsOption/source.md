@@ -1,6 +1,6 @@
 ```javascript
 import React from 'react'
-import DeniReactTreeView from 'deni-react-treeview'
+import MuaazReactTreeView from 'muaaz-react-treeview'
 import { FaTrash, FaEdit } from 'react-icons/fa';
 
 const ActionButtonsOption: React.FC = () => {
@@ -24,8 +24,8 @@ const ActionButtonsOption: React.FC = () => {
   ];
 
   return (
-    <DeniReactTreeView
-      url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json"
+    <MuaazReactTreeView
+      url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries.json"
       selectRow={ true }
       actionButtons={ actionButtons }
       onActionButtonClick={ onActionButtonClick }

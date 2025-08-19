@@ -1,10 +1,10 @@
 import React from 'react'
-import DeniReactTreeView from '../../../components'
+import MuaazReactTreeView from '../../../components'
 
 const ShowRootOption: React.FC = () => {
   return (
-    <DeniReactTreeView 
-      url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json" 
+    <MuaazReactTreeView 
+      url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries.json" 
       showRoot={ true } 
     />
   )  

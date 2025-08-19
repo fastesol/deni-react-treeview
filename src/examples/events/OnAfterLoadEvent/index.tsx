@@ -1,23 +1,19 @@
-import React, { useRef } from 'react'
-import DeniReactTreeView from '../../../components';
+import React from 'react';
+import MuaazReactTreeView from '../../../components/muaaz-react-treeview/MuaazReactTreeView';
+import { TreeItem } from '../../../components/muaaz-react-treeview-item/MuaazReactTreeViewItemProps';
 
-const OnAfterLoadEvent: React.FC = () => {
-  const treeviewRef = useRef<DeniReactTreeView>(null);
-
-  const loadButtonClick = () => treeviewRef.current?.api.load()
-  const onAfterLoad = (data, item) => alert(`onAfterLoad event: ${new Date()}`)
+const OnAfterLoadEvent = () => {
+  const onAfterLoad = (data: any, item: TreeItem) => alert(`onAfterLoad event: ${new Date()}`)
 
   return (
     <div>
-      <button onClick={ loadButtonClick } style={{ marginBottom: '5px' }}>Click to Load</button>
-      <DeniReactTreeView 
-        ref={ treeviewRef }
-        autoLoad={ false } 
-        url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json" 
-        onAfterLoad={ onAfterLoad }
+      <h3>onAfterLoad Event Example</h3>
+      <MuaazReactTreeView 
+        url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/public/api/countries.json"
+        onAfterLoad={onAfterLoad}
       />
     </div>
-  )
+  );
 }
 
-export default OnAfterLoadEvent
+export default OnAfterLoadEvent;

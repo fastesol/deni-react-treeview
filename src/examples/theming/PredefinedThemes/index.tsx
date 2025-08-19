@@ -1,5 +1,5 @@
 import React from 'react'
-import DeniReactTreeView from "../../../components"
+import MuaazReactTreeView from "../../../components"
 
 const themes = [ 'classic', 'metro', 'moonlight', 'purple', 'green', 'orange', 'red', 'silver' ]
 
@@ -8,12 +8,12 @@ const PredefinedThemes = () => {
     <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }} >
       { 
         themes.map((theme, index) => {
-          return <DeniReactTreeView 
+          return <MuaazReactTreeView 
             style={{ marginRight: '10px', marginBottom: '10px' }}
             key={index} 
             showCheckbox={true} 
             theme={theme} 
-            url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries-by-continents.json"
+            url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries-by-continents.json"
           />
         })
         }

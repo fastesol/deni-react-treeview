@@ -1,5 +1,5 @@
-# deni-react-treeview
-A modern, themable and configurable treeview for React
+# muaaz-react-treeview
+An updated version of deni-react-treeview, which is abandoned 5 years ago. It's a modern, themable and configurable treeview for React
 
 
 [live examples](https://deni-react-treeview.vercel.app/)
@@ -12,18 +12,16 @@ TODO: Implement unit tests, E2E tests, CI.
 
 ## Installing with NPM
 
-npm install deni-react-treeview --save
+npm install muaaz-react-treeview --save
 
 ## Usage
 
 Added to your react component
 ```html
-    <TreeView url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json" /> 
+    <TreeView url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries.json" /> 
 ```
-For more details: [examples](https://deni-react-treeview.vercel.app/)
 
-## API
-[documentation](https://denimar.github.io/deni-react-treeview/api.html)
+For more details Visit abandoned package [https://github.com/denimar/deni-react-treeview](https://github.com/denimar/deni-react-treeview)
 
 ## Features
 * Cross-Browser.
@@ -95,10 +93,12 @@ For more details: [examples](https://deni-react-treeview.vercel.app/)
 
 ## License
 
-[MIT.](https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/LICENSE-MIT)
+[MIT.](https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/LICENSE-MIT)
 
-## Author
+## Maintained by
+
+[Muaaz Khalid](http://github.com/fastesol) (muaaz.khalid.m@gmail.com) is a full-stack developper and System Architect at FASTDev Labs LLC.
+
+## Original Author
 
 [Denimar de Moraes](http://github.com/denimar) (denimar@gmail.com) is a full-stack developper at Feracode, Florianópolis, Santa Catarina, Brazil.
-
-[<img src="https://raw.githubusercontent.com/denimar/fakedata/master/data/images/linkedin-badge.png">](https://www.linkedin.com/in/denimar-moraes/?locale=en_US)

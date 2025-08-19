@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
-import DeniReactTreeView from '../../../components'
+import MuaazReactTreeView from '../../../components'
 
 const AddItemAndSubitemApi: React.FC = () => {
-  const treeviewRef = useRef<DeniReactTreeView>(null)
+  const treeviewRef = useRef<MuaazReactTreeView>(null)
 
   const addItemAndSubItem = () => {
     const api = treeviewRef.current?.api
@@ -17,9 +17,9 @@ const AddItemAndSubitemApi: React.FC = () => {
   return (
     <div>
       <button onClick={ addItemAndSubItem }>Click to Add an Item and SubItem</button>
-      <DeniReactTreeView 
+      <MuaazReactTreeView 
         ref={ treeviewRef }
-        url="https://raw.githubusercontent.com/denimar/deni-react-treeview/develop/src/assets/data/countries.json" 
+        url="https://raw.githubusercontent.com/denimar/muaaz-react-treeview/develop/src/assets/data/countries.json" 
       />
     </div>
   )
